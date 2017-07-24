@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+"@npm-polymer/webcomponentsjs@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@npm-polymer/webcomponentsjs/-/webcomponentsjs-1.0.1.tgz#1733a45d77fe3d427679e1e3a479988e0b526089"
+
 "@polymer/polymer@^2.0.2":
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/@polymer/polymer/-/polymer-2.0.2.tgz#2335cbd1f35999dccc8273cda10fd23416753f87"

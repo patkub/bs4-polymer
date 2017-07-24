@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="Cache-Control" content="max-age=86400"/>
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+  <title>BS4 Test</title>
+  
+  <!--
+    If deploying to a non-root path, replace href="/" with the full path to the project root.
+    For example: href="/polymer-starter-kit/relative-path-example/"
+  -->
+  <base href="/">
+  
+  <script>
+    // Enable Shady DOM instead of default Shadow DOM
+    window.ShadyDOM = {force: true};
+    window.customElements.forcePolyfill = true;
+    
+    // Register the base URL
+    const baseUrl = document.querySelector('base').href;
+  </script>
+
+  <!-- Load webcomponents-lite.js to check and load any polyfills the browser needs -->
+  <script src="node_modules/@npm-polymer/webcomponentsjs/webcomponents-loader.js"></script>
+  
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <script defer src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+  <script defer src="node_modules/tether/dist/js/tether.min.js"></script>
+  <script defer src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  
+  <!-- BS4 Custom Elements -->
+  <link rel="import" href="bs4-alert/bs4-alert.html">
+</head>
+
+<body>
+    <bs4-alert context="success">
+      <strong>Well done!</strong> You successfully read this important alert message.
+    </bs4-alert>
+    <bs4-alert context="info">
+      <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+    </bs4-alert>
+    <bs4-alert context="warning">
+      <strong>Warning!</strong> Better check yourself, you're not looking too good.
+    </bs4-alert>
+    <bs4-alert context="danger">
+      <strong>Oh snap!</strong> Change a few things up and try submitting again.
+    </bs4-alert>
+</body>
+</html>
