@@ -1,0 +1,37 @@
+<!-- Polymer Library -->
+<link rel="import" href="../../node_modules/@polymer/polymer/polymer-element.html">
+
+<!-- Breadcrumb Item -->
+<link rel="import" href="bs4-breadcrumb-item.html">
+
+<!--
+`<bs4-breadcrumb>` Indicate the current page’s location within a navigational
+hierarchy. Separators are automatically added in CSS through ::before and
+content.
+
+In typical use, add the element to your body:
+
+    <body>
+      <bs4-breadcrumb></bs4-breadcrumb>
+-->
+<dom-module id="bs4-breadcrumb">
+  <template>
+    <style>.breadcrumb{padding:.75rem 1rem;margin-bottom:1rem;list-style:none;background-color:#eceeef;border-radius:.25rem}.breadcrumb::after{display:block;content:"";clear:both}.breadcrumb-item{float:left}.breadcrumb-item+.breadcrumb-item::before{display:inline-block;padding-right:.5rem;padding-left:.5rem;color:#636c72;content:"/"}.breadcrumb-item+.breadcrumb-item:hover::before{text-decoration:none}.breadcrumb-item.active{color:#636c72}</style>
+    
+    <ol class="breadcrumb">
+      <slot></slot>
+    </ol>
+  </template>
+  
+  <script>
+    /** Class representing the breadcrumb. */
+    class BS4Breadcrumb extends Polymer.Element {
+      /** HTML tag name. */
+      static get is() {
+        return 'bs4-breadcrumb';
+      }
+    }
+
+    window.customElements.define(BS4Breadcrumb.is, BS4Breadcrumb);
+  </script>
+</dom-module>

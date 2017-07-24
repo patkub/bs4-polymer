@@ -1,0 +1,49 @@
+<!-- Polymer Library -->
+<link rel="import" href="../../node_modules/@polymer/polymer/polymer-element.html">
+
+<!--
+`<bs4-badge>` Small and adaptive tag for adding context to just about any
+content.
+
+In typical use, add the element to your body:
+
+    <body>
+      <bs4-badge></bs4-badge>
+-->
+<dom-module id="bs4-badge">
+  <template>
+    <style>.badge{display:inline-block;padding:.25em .4em;font-size:75%;font-weight:700;line-height:1;color:#fff;text-align:center;white-space:nowrap;vertical-align:baseline;border-radius:.25rem}.badge:empty{display:none}.btn .badge{position:relative;top:-1px}a.badge:focus,a.badge:hover{color:#fff;text-decoration:none;cursor:pointer}.badge-pill{padding-right:.6em;padding-left:.6em;border-radius:10rem}.badge-default{background-color:#636c72}.badge-default[href]:focus,.badge-default[href]:hover{background-color:#4b5257}.badge-primary{background-color:#0275d8}.badge-primary[href]:focus,.badge-primary[href]:hover{background-color:#025aa5}.badge-success{background-color:#5cb85c}.badge-success[href]:focus,.badge-success[href]:hover{background-color:#449d44}.badge-info{background-color:#5bc0de}.badge-info[href]:focus,.badge-info[href]:hover{background-color:#31b0d5}.badge-warning{background-color:#f0ad4e}.badge-warning[href]:focus,.badge-warning[href]:hover{background-color:#ec971f}.badge-danger{background-color:#d9534f}.badge-danger[href]:focus,.badge-danger[href]:hover{background-color:#c9302c}</style>
+    
+    <span class$="badge {{type}} badge-{{context}}">{{text}}</span>
+    
+  </template>
+  
+  <script>
+    /** Class representing the badge. */
+    class BS4Badge extends Polymer.Element {
+      /** HTML tag name. */
+      static get is() {
+        return 'bs4-badge';
+      }
+      
+      /** Declared properties. */
+      static get properties() {
+        return {
+          /** context: `default`, `success`, `info`, `warning`, or `danger` */
+          context: String,
+          
+          /** type: `` or `badge-pill` to make badges more rounded */
+          type: {
+            type: String,
+            value: '',
+          },
+          
+          /** Text content */
+          text: String,
+        };
+      }
+    }
+
+    window.customElements.define(BS4Badge.is, BS4Badge);
+  </script>
+</dom-module>
