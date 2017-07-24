@@ -32,6 +32,7 @@
   <!-- BS4 Custom Elements -->
   <link rel="import" href="dist/bs4-core.html">
   <link rel="import" href="dist/bs4-alert/bs4-alert.html">
+  <link rel="import" href="dist/bs4-badge/bs4-badge.html">
 </head>
 
 <body>
@@ -48,6 +49,11 @@
       <bs4-alert context="danger">
         <strong>Oh snap!</strong> Change a few things up and try submitting again.
       </bs4-alert>
+      
+      <bs4-badge context="default" text="Default"></bs4-badge>
+      <bs4-badge context="default" text="Default" type="badge-pill"></bs4-badge>
+      <h1>Example heading <bs4-badge context="default" text="New"></bs4-badge></h1>
+      
     </bs4-core>
 </body>
 </html>
