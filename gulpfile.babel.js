@@ -27,10 +27,16 @@ gulp.task('sass', function() {
 
 // Inline css
 gulp.task('inline', ['sass'], function() {
-  return gulp.src('src/**/*.html')
+  return gulp.src(['src/**/*.html'])
     .pipe(inlineSource())
     .pipe(gulp.dest('dist/'));
 });
 
+// Copy core css
+gulp.task('copy', ['sass'], function() {
+  return gulp.src(['src/bs4-core.min.css'])
+    .pipe(gulp.dest('dist/'));
+});
+
 // Default task
-gulp.task('default', ['sass', 'inline']);
+gulp.task('default', ['sass', 'inline', 'copy']);

@@ -23,37 +23,39 @@
   <!-- Load webcomponents-lite.js to check and load any polyfills the browser needs -->
   <script src="node_modules/@npm-polymer/webcomponentsjs/webcomponents-loader.js"></script>
   
-  <!-- Bootstrap -->
-  <!-- <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
+  <!-- Bootstrap JS -->
   <script defer src="node_modules/jquery/dist/jquery.slim.min.js"></script>
   <script defer src="node_modules/tether/dist/js/tether.min.js"></script>
   <script defer src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   
+  <!-- Bootstrap Core CSS -->
+  <link rel="stylesheet" href="dist/bs4-core.min.css">
+  
   <!-- BS4 Custom Elements -->
-  <link rel="import" href="dist/bs4-core.html">
   <link rel="import" href="dist/bs4-alert/bs4-alert.html">
   <link rel="import" href="dist/bs4-badge/bs4-badge.html">
 </head>
 
 <body>
-    <bs4-core>
-      <bs4-alert context="success">
-        <strong>Well done!</strong> You successfully read this important alert message.
-      </bs4-alert>
-      <bs4-alert context="info">
-        <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
-      </bs4-alert>
-      <bs4-alert context="warning">
-        <strong>Warning!</strong> Better check yourself, you're not looking too good.
-      </bs4-alert>
-      <bs4-alert context="danger">
-        <strong>Oh snap!</strong> Change a few things up and try submitting again.
-      </bs4-alert>
+
+  <div class="container">
+    <bs4-alert context="success">
+      <strong>Well done!</strong> You successfully read this important alert message.
+    </bs4-alert>
+    <bs4-alert context="info">
+      <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+    </bs4-alert>
+    <bs4-alert context="warning">
+      <strong>Warning!</strong> Better check yourself, you're not looking too good.
+    </bs4-alert>
+    <bs4-alert context="danger">
+      <strong>Oh snap!</strong> Change a few things up and try submitting again.
+    </bs4-alert>
+    
+    <bs4-badge context="default" text="Default"></bs4-badge>
+    <bs4-badge context="default" text="Default" type="badge-pill"></bs4-badge>
+    <h1>Example heading <bs4-badge context="default" text="New"></bs4-badge></h1>
+  </div>
       
-      <bs4-badge context="default" text="Default"></bs4-badge>
-      <bs4-badge context="default" text="Default" type="badge-pill"></bs4-badge>
-      <h1>Example heading <bs4-badge context="default" text="New"></bs4-badge></h1>
-      
-    </bs4-core>
 </body>
 </html>
