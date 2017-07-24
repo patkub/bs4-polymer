@@ -1,5 +1,5 @@
 <!-- Polymer Library -->
-<link rel="import" href="../node_modules/@polymer/polymer/polymer-element.html">
+<link rel="import" href="../../node_modules/@polymer/polymer/polymer-element.html">
 
 <!--
 `<bs4-alert>` Provide contextual feedback messages for typical user actions
@@ -12,6 +12,8 @@ In typical use, add the element to your body:
 -->
 <dom-module id="bs4-alert">
   <template>
+    <link rel="stylesheet" href="bs4-alert.min.css" inline>
+    
     <div class$="alert alert-[[context]]" role="alert">
         <slot></slot>
     </div>

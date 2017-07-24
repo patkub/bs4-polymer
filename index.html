@@ -16,10 +16,6 @@
   <base href="/">
   
   <script>
-    // Enable Shady DOM instead of default Shadow DOM
-    window.ShadyDOM = {force: true};
-    window.customElements.forcePolyfill = true;
-    
     // Register the base URL
     const baseUrl = document.querySelector('base').href;
   </script>
@@ -28,27 +24,30 @@
   <script src="node_modules/@npm-polymer/webcomponentsjs/webcomponents-loader.js"></script>
   
   <!-- Bootstrap -->
-  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
   <script defer src="node_modules/jquery/dist/jquery.slim.min.js"></script>
   <script defer src="node_modules/tether/dist/js/tether.min.js"></script>
   <script defer src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   
   <!-- BS4 Custom Elements -->
-  <link rel="import" href="bs4-alert/bs4-alert.html">
+  <link rel="import" href="dist/bs4-core.html">
+  <link rel="import" href="dist/bs4-alert/bs4-alert.html">
 </head>
 
 <body>
-    <bs4-alert context="success">
-      <strong>Well done!</strong> You successfully read this important alert message.
-    </bs4-alert>
-    <bs4-alert context="info">
-      <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
-    </bs4-alert>
-    <bs4-alert context="warning">
-      <strong>Warning!</strong> Better check yourself, you're not looking too good.
-    </bs4-alert>
-    <bs4-alert context="danger">
-      <strong>Oh snap!</strong> Change a few things up and try submitting again.
-    </bs4-alert>
+    <bs4-core>
+      <bs4-alert context="success">
+        <strong>Well done!</strong> You successfully read this important alert message.
+      </bs4-alert>
+      <bs4-alert context="info">
+        <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+      </bs4-alert>
+      <bs4-alert context="warning">
+        <strong>Warning!</strong> Better check yourself, you're not looking too good.
+      </bs4-alert>
+      <bs4-alert context="danger">
+        <strong>Oh snap!</strong> Change a few things up and try submitting again.
+      </bs4-alert>
+    </bs4-core>
 </body>
 </html>
