@@ -38,5 +38,5 @@ gulp.task('copy', ['sass'], function() {
     .pipe(gulp.dest('dist/'));
 });
 
-// Default task
-gulp.task('default', ['sass', 'inline', 'copy']);
+// Build task
+gulp.task('build', ['sass', 'inline', 'copy']);
