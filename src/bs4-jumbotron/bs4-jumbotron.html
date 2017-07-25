@@ -1,6 +1,9 @@
 <!-- Polymer Library -->
 <link rel="import" href="../../../@npm-polymer/polymer/polymer-element.html">
 
+<!-- Shared Styles Jumbotron -->
+<link rel="import" href="../shared-styles/bs4-jumbotron/bs4-jumbotron.html">
+
 <!--
 `<bs4-jumbotron>` A lightweight, flexible component that can optionally extend
 the entire viewport to showcase key marketing messages on your site.
@@ -12,7 +15,7 @@ In typical use, add the element to your body:
 -->
 <dom-module id="bs4-jumbotron">
   <template>
-    <link rel="stylesheet" href="bs4-jumbotron.min.css" inline>
+    <style include="bs4-shared-styles-jumbotron"></style>
     
     <div class="jumbotron">
       <slot></slot>

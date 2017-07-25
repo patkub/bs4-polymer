@@ -1,6 +1,9 @@
 <!-- Polymer Library -->
 <link rel="import" href="../../../@npm-polymer/polymer/polymer-element.html">
 
+<!-- Shared Styles Alert -->
+<link rel="import" href="../shared-styles/bs4-alert/bs4-alert.html">
+
 <!--
 `<bs4-alert>` Provide contextual feedback messages for typical user actions
 with the handful of available and flexible alert messages.
@@ -12,7 +15,7 @@ In typical use, add the element to your body:
 -->
 <dom-module id="bs4-alert">
   <template>
-    <link rel="stylesheet" href="bs4-alert.min.css" inline>
+    <style include="bs4-shared-styles-alert"></style>
     
     <div class$="alert alert-{{context}}" role="alert">
         <slot></slot>

@@ -1,6 +1,9 @@
 <!-- Polymer Library -->
 <link rel="import" href="../../../@npm-polymer/polymer/polymer-element.html">
 
+<!-- Shared Styles Badge -->
+<link rel="import" href="../shared-styles/bs4-badge/bs4-badge.html">
+
 <!--
 `<bs4-badge>` Small and adaptive tag for adding context to just about any
 content.
@@ -12,7 +15,7 @@ In typical use, add the element to your body:
 -->
 <dom-module id="bs4-badge">
   <template>
-    <link rel="stylesheet" href="bs4-badge.min.css" inline>
+    <style include="bs4-shared-styles-badge"></style>
 
     <span class$="badge {{type}} badge-{{context}}">{{text}}</span>
   </template>

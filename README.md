@@ -1,4 +1,4 @@
-# Bootstrap 4 Polymer Elements
+# Bootstrap 4 Polymer Shared Styles
 
 ### Setup
 
