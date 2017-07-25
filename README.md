@@ -20,7 +20,7 @@ yarn install
 ### Build
 
 This command compiles sass and inlines the resulting css into the components.
-The components are output to the `dist` folder.
+The resulting components are output to the `dist` folder.
 
 ```sh
 yarn run build
