@@ -1,5 +1,5 @@
 <!-- Polymer Library -->
-<link rel="import" href="../../@polymer/polymer/polymer-element.html">
+<link rel="import" href="../../../@polymer/polymer/polymer-element.html">
 
 <!--
 `<bs4-card>` A card is a flexible and extensible content container. It includes
@@ -16,32 +16,8 @@ In typical use, add the element to your body:
     <link rel="stylesheet" href="bs4-card.min.css" inline>
     
     <div class="card">
-      <div class="card-img-wrapper">
-        <img class="card-img-top" src$="[[card.image]]" alt$="[[card.caption]]">
-      </div>
-      <div class="card-block">
-          <h4 class="card-title">[[card.title]]</h4>
-          <p class="card-text">
-            <template is="dom-if" if="{{editable}}">
-              <textarea class="form-control" id="[[card.title]]" rows="10" value="{{card.text::input}}"></textarea>
-              <h4 class="card-editable">Preview:</h4>
-            </template>
-            <marked-element markdown="{{card.text}}" id="markdown">
-              <div slot="markdown-html"></div>
-            </marked-element>
-          </p>
-      </div>
-      <div class="card-footer">
-          <template is="dom-if" if="{{!editable}}">
-              <a href$="[[card.link]]" class="btn btn-outline-primary" role="button"><span class$="fa fa-fw fa-[[card.icon]]" aria-hidden="true"></span>[[card.button]]</a>
-          </template>
-          <template is="dom-if" if="{{editable}}">
-              <span class="text-primary"><span class$="fa fa-fw fa-[[card.icon]]" aria-hidden="true"></span>[[card.button]]</span>
-          </template>
-      </div>
+      <slot></slot>
     </div>
-    
-    
   </template>
   
   <script>
