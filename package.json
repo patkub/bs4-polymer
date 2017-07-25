@@ -20,7 +20,8 @@
     "gulp-sass": "^3.1.0"
   },
   "scripts": {
-    "build": "gulp build"
+    "build": "gulp build",
+    "docs": "polymer analyze --sources dist/ > analysis.json"
   },
   "babel": {
     "only": "gulpfile.babel.js",
