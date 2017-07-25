@@ -2,13 +2,13 @@
 # yarn lockfile v1
 
 
+"@npm-polymer/polymer@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@npm-polymer/polymer/-/polymer-2.0.1.tgz#6d0b8c9ad561c4f385412d442b6ef7d51bedda3b"
+
 "@npm-polymer/webcomponentsjs@^1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@npm-polymer/webcomponentsjs/-/webcomponentsjs-1.0.1.tgz#1733a45d77fe3d427679e1e3a479988e0b526089"
-
-"@polymer/polymer@^2.0.2":
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/@polymer/polymer/-/polymer-2.0.2.tgz#2335cbd1f35999dccc8273cda10fd23416753f87"
 
 abbrev@1:
   version "1.1.0"
@@ -1767,15 +1767,15 @@ micromatch@^2.3.7:
     parse-glob "^3.0.4"
     regex-cache "^0.4.2"
 
-mime-db@~1.27.0:
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.27.0.tgz#820f572296bbd20ec25ed55e5b5de869e5436eb1"
+mime-db@~1.29.0:
+  version "1.29.0"
+  resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.29.0.tgz#48d26d235589651704ac5916ca06001914266878"
 
 mime-types@^2.1.12, mime-types@~2.1.7:
-  version "2.1.15"
-  resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.15.tgz#a4ebf5064094569237b8cf70046776d09fc92aed"
+  version "2.1.16"
+  resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.16.tgz#2b858a52e5ecd516db897ac2be87487830698e23"
   dependencies:
-    mime-db "~1.27.0"
+    mime-db "~1.29.0"
 
 minimatch@^2.0.1:
   version "2.0.10"

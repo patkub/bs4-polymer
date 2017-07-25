@@ -6,8 +6,8 @@
   "author": "Patrick Kubiak <patrick@antuple.net>",
   "license": "MIT",
   "dependencies": {
+    "@npm-polymer/polymer": "^2.0.1",
     "@npm-polymer/webcomponentsjs": "^1.0.1",
-    "@polymer/polymer": "^2.0.2",
     "bootstrap": "4.0.0-alpha.6"
   },
   "devDependencies": {
