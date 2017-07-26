@@ -21,7 +21,7 @@
   },
   "scripts": {
     "build": "gulp build",
-    "docs": "polymer analyze --sources dist/ > analysis.json"
+    "docs": "polymer analyze --root dist > analysis.json"
   },
   "babel": {
     "only": "gulpfile.babel.js",
