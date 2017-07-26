@@ -4,7 +4,7 @@
     {
       "description": "`<bs4-alert>` Provide contextual feedback messages for typical user actions\nwith the handful of available and flexible alert messages.\n\nIn typical use, add the element to your body:\n\n    <body>\n      <bs4-alert context=\"success\"></bs4-alert>\n\nClass representing the alert.",
       "summary": "",
-      "path": "dist\\elements\\bs4-alert\\bs4-alert.html",
+      "path": "elements\\bs4-alert\\bs4-alert.html",
       "properties": [
         {
           "name": "context",
@@ -71,7 +71,7 @@
           "description": "",
           "name": "",
           "range": {
-            "file": "dist/elements/bs4-alert/bs4-alert.html",
+            "file": "elements/bs4-alert/bs4-alert.html",
             "start": {
               "line": 20,
               "column": 8
@@ -88,324 +88,7 @@
     {
       "description": "`<bs4-badge>` Small and adaptive tag for adding context to just about any\ncontent.\n\nIn typical use, add the element to your body:\n\n    <body>\n      <bs4-badge></bs4-badge>\n\nClass representing the badge.",
       "summary": "",
-      "path": "dist\\elements\\bs4-badge\\bs4-badge.html",
-      "properties": [
-        {
-          "name": "context",
-          "type": "string",
-          "description": "context: `default`, `success`, `info`, `warning`, or `danger`",
-          "privacy": "public",
-          "sourceRange": {
-            "start": {
-              "line": 34,
-              "column": 10
-            },
-            "end": {
-              "line": 34,
-              "column": 25
-            }
-          },
-          "metadata": {
-            "polymer": {}
-          }
-        },
-        {
-          "name": "type",
-          "type": "string",
-          "description": "type: `` or `badge-pill` to make badges more rounded",
-          "privacy": "public",
-          "sourceRange": {
-            "start": {
-              "line": 37,
-              "column": 10
-            },
-            "end": {
-              "line": 40,
-              "column": 11
-            }
-          },
-          "metadata": {
-            "polymer": {}
-          },
-          "defaultValue": "\"\""
-        },
-        {
-          "name": "text",
-          "type": "string",
-          "description": "Text content",
-          "privacy": "public",
-          "sourceRange": {
-            "start": {
-              "line": 43,
-              "column": 10
-            },
-            "end": {
-              "line": 43,
-              "column": 22
-            }
-          },
-          "metadata": {
-            "polymer": {}
-          }
-        }
-      ],
-      "methods": [],
-      "staticMethods": [],
-      "demos": [],
-      "metadata": {},
-      "sourceRange": {
-        "start": {
-          "line": 24,
-          "column": 4
-        },
-        "end": {
-          "line": 46,
-          "column": 5
-        }
-      },
-      "privacy": "public",
-      "superclass": "HTMLElement",
-      "name": "BS4Badge",
-      "attributes": [
-        {
-          "name": "context",
-          "description": "context: `default`, `success`, `info`, `warning`, or `danger`",
-          "sourceRange": {
-            "start": {
-              "line": 34,
-              "column": 10
-            },
-            "end": {
-              "line": 34,
-              "column": 25
-            }
-          },
-          "metadata": {},
-          "type": "string"
-        },
-        {
-          "name": "type",
-          "description": "type: `` or `badge-pill` to make badges more rounded",
-          "sourceRange": {
-            "start": {
-              "line": 37,
-              "column": 10
-            },
-            "end": {
-              "line": 40,
-              "column": 11
-            }
-          },
-          "metadata": {},
-          "type": "string"
-        },
-        {
-          "name": "text",
-          "description": "Text content",
-          "sourceRange": {
-            "start": {
-              "line": 43,
-              "column": 10
-            },
-            "end": {
-              "line": 43,
-              "column": 22
-            }
-          },
-          "metadata": {},
-          "type": "string"
-        }
-      ],
-      "events": [],
-      "styling": {
-        "cssVariables": [],
-        "selectors": []
-      },
-      "slots": [],
-      "tagname": "bs4-badge"
-    },
-    {
-      "description": "`<bs4-jumbotron>` A lightweight, flexible component that can optionally extend\nthe entire viewport to showcase key marketing messages on your site.\n\nIn typical use, add the element to your body:\n\n    <body>\n      <bs4-jumbotron></bs4-jumbotron>\n\nClass representing the jumbotron.",
-      "summary": "",
-      "path": "dist\\elements\\bs4-jumbotron\\bs4-jumbotron.html",
-      "properties": [],
-      "methods": [],
-      "staticMethods": [],
-      "demos": [],
-      "metadata": {},
-      "sourceRange": {
-        "start": {
-          "line": 26,
-          "column": 4
-        },
-        "end": {
-          "line": 31,
-          "column": 5
-        }
-      },
-      "privacy": "public",
-      "superclass": "HTMLElement",
-      "name": "BS4Jubotron",
-      "attributes": [],
-      "events": [],
-      "styling": {
-        "cssVariables": [],
-        "selectors": []
-      },
-      "slots": [
-        {
-          "description": "",
-          "name": "",
-          "range": {
-            "file": "dist/elements/bs4-jumbotron/bs4-jumbotron.html",
-            "start": {
-              "line": 20,
-              "column": 6
-            },
-            "end": {
-              "line": 20,
-              "column": 19
-            }
-          }
-        }
-      ],
-      "tagname": "bs4-jumbotron"
-    },
-    {
-      "description": "`<bs4-card>` A card is a flexible and extensible content container. It includes\noptions for headers and footers, a wide variety of content, contextual\nbackground colors, and powerful display options.\n\nIn typical use, add the element to your body:\n\n    <body>\n      <bs4-card></bs4-card>\n\nClass representing the card.",
-      "summary": "",
-      "path": "dist\\elements\\bs4-card\\bs4-card.html",
-      "properties": [],
-      "methods": [],
-      "staticMethods": [],
-      "demos": [],
-      "metadata": {},
-      "sourceRange": {
-        "start": {
-          "line": 25,
-          "column": 4
-        },
-        "end": {
-          "line": 30,
-          "column": 5
-        }
-      },
-      "privacy": "public",
-      "superclass": "HTMLElement",
-      "name": "BS4Card",
-      "attributes": [],
-      "events": [],
-      "styling": {
-        "cssVariables": [],
-        "selectors": []
-      },
-      "slots": [
-        {
-          "description": "",
-          "name": "",
-          "range": {
-            "file": "dist/elements/bs4-card/bs4-card.html",
-            "start": {
-              "line": 20,
-              "column": 4
-            },
-            "end": {
-              "line": 20,
-              "column": 17
-            }
-          }
-        }
-      ],
-      "tagname": "bs4-card"
-    },
-    {
-      "description": "`<bs4-alert>` Provide contextual feedback messages for typical user actions\nwith the handful of available and flexible alert messages.\n\nIn typical use, add the element to your body:\n\n    <body>\n      <bs4-alert context=\"success\"></bs4-alert>\n\nClass representing the alert.",
-      "summary": "",
-      "path": "src\\elements\\bs4-alert\\bs4-alert.html",
-      "properties": [
-        {
-          "name": "context",
-          "type": "string",
-          "description": "context: `success`, `info`, `warning`, or `danger`",
-          "privacy": "public",
-          "sourceRange": {
-            "start": {
-              "line": 36,
-              "column": 10
-            },
-            "end": {
-              "line": 36,
-              "column": 25
-            }
-          },
-          "metadata": {
-            "polymer": {}
-          }
-        }
-      ],
-      "methods": [],
-      "staticMethods": [],
-      "demos": [],
-      "metadata": {},
-      "sourceRange": {
-        "start": {
-          "line": 26,
-          "column": 4
-        },
-        "end": {
-          "line": 39,
-          "column": 5
-        }
-      },
-      "privacy": "public",
-      "superclass": "HTMLElement",
-      "name": "BS4Alert",
-      "attributes": [
-        {
-          "name": "context",
-          "description": "context: `success`, `info`, `warning`, or `danger`",
-          "sourceRange": {
-            "start": {
-              "line": 36,
-              "column": 10
-            },
-            "end": {
-              "line": 36,
-              "column": 25
-            }
-          },
-          "metadata": {},
-          "type": "string"
-        }
-      ],
-      "events": [],
-      "styling": {
-        "cssVariables": [],
-        "selectors": []
-      },
-      "slots": [
-        {
-          "description": "",
-          "name": "",
-          "range": {
-            "file": "src/elements/bs4-alert/bs4-alert.html",
-            "start": {
-              "line": 20,
-              "column": 8
-            },
-            "end": {
-              "line": 20,
-              "column": 21
-            }
-          }
-        }
-      ],
-      "tagname": "bs4-alert"
-    },
-    {
-      "description": "`<bs4-badge>` Small and adaptive tag for adding context to just about any\ncontent.\n\nIn typical use, add the element to your body:\n\n    <body>\n      <bs4-badge></bs4-badge>\n\nClass representing the badge.",
-      "summary": "",
-      "path": "src\\elements\\bs4-badge\\bs4-badge.html",
+      "path": "elements\\bs4-badge\\bs4-badge.html",
       "properties": [
         {
           "name": "context",
@@ -544,7 +227,7 @@
     {
       "description": "`<bs4-card>` A card is a flexible and extensible content container. It includes\noptions for headers and footers, a wide variety of content, contextual\nbackground colors, and powerful display options.\n\nIn typical use, add the element to your body:\n\n    <body>\n      <bs4-card></bs4-card>\n\nClass representing the card.",
       "summary": "",
-      "path": "src\\elements\\bs4-card\\bs4-card.html",
+      "path": "elements\\bs4-card\\bs4-card.html",
       "properties": [],
       "methods": [],
       "staticMethods": [],
@@ -574,7 +257,7 @@
           "description": "",
           "name": "",
           "range": {
-            "file": "src/elements/bs4-card/bs4-card.html",
+            "file": "elements/bs4-card/bs4-card.html",
             "start": {
               "line": 20,
               "column": 4
@@ -591,7 +274,7 @@
     {
       "description": "`<bs4-jumbotron>` A lightweight, flexible component that can optionally extend\nthe entire viewport to showcase key marketing messages on your site.\n\nIn typical use, add the element to your body:\n\n    <body>\n      <bs4-jumbotron></bs4-jumbotron>\n\nClass representing the jumbotron.",
       "summary": "",
-      "path": "src\\elements\\bs4-jumbotron\\bs4-jumbotron.html",
+      "path": "elements\\bs4-jumbotron\\bs4-jumbotron.html",
       "properties": [],
       "methods": [],
       "staticMethods": [],
@@ -621,7 +304,7 @@
           "description": "",
           "name": "",
           "range": {
-            "file": "src/elements/bs4-jumbotron/bs4-jumbotron.html",
+            "file": "elements/bs4-jumbotron/bs4-jumbotron.html",
             "start": {
               "line": 20,
               "column": 6
