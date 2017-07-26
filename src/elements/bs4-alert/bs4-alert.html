@@ -1,0 +1,44 @@
+<!-- Polymer Library -->
+<link rel="import" href="../../../../@npm-polymer/polymer/polymer-element.html">
+
+<!-- Shared Styles Alert -->
+<link rel="import" href="../../shared-styles/bs4-alert/bs4-alert.html">
+
+<!--
+`<bs4-alert>` Provide contextual feedback messages for typical user actions
+with the handful of available and flexible alert messages.
+
+In typical use, add the element to your body:
+
+    <body>
+      <bs4-alert context="success"></bs4-alert>
+-->
+<dom-module id="bs4-alert">
+  <template>
+    <style include="bs4-shared-styles-alert"></style>
+    
+    <div class$="alert alert-{{context}}" role="alert">
+        <slot></slot>
+    </div>
+  </template>
+  
+  <script>
+    /** Class representing the alert. */
+    class BS4Alert extends Polymer.Element {
+      /** HTML tag name. */
+      static get is() {
+        return 'bs4-alert';
+      }
+      
+      /** Declared properties. */
+      static get properties() {
+        return {
+          /** context: `success`, `info`, `warning`, or `danger` */
+          context: String,
+        };
+      }
+    }
+
+    window.customElements.define(BS4Alert.is, BS4Alert);
+  </script>
+</dom-module>
