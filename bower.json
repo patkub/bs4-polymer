@@ -1,0 +1,21 @@
+{
+  "name": "bs4-polymer-docs",
+  "authors": [
+    "Patrick Kubiak <patrick@antuple.net>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "iron-component-page": "^3.0.1"
+  },
+  "private": true
+}
