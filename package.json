@@ -13,6 +13,9 @@
   "devDependencies": {
     "babel-preset-es2015": "^6.24.1",
     "babel-register": "^6.24.1",
+    "eslint": "^4.3.0",
+    "eslint-config-google": "^0.9.1",
+    "eslint-plugin-html": "^3.1.1",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.7.0",
     "gulp-inline-source": "^3.1.0",
@@ -21,7 +24,9 @@
   },
   "scripts": {
     "build": "gulp build",
-    "docs": "polymer analyze --root dist > analysis.json"
+    "docs": "polymer analyze --root dist > analysis.json",
+    "lint": "yarn run lint:javascript",
+    "lint:javascript": "eslint src/ --ext js,html"
   },
   "babel": {
     "only": "gulpfile.babel.js",

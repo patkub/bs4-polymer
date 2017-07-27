@@ -1,0 +1,23 @@
+{
+  "extends": ["eslint:recommended", "google"],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true
+  },
+  "plugins": ["html"],
+  "settings": {
+    "html/report-bad-indent": "error"
+  },
+  "rules": {
+    "indent": ["error", 2],
+    "max-len": ["error", { "ignoreComments": true, "ignoreStrings": true }],
+    "new-cap": ["error", { "capIsNewExceptions": ["Polymer"] }],
+    "no-trailing-spaces": ["error", { "skipBlankLines": true }]
+  },
+  "globals": {
+    "Polymer": true
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "sources": [
+    "src/**/*",
+    "package.json"
+  ],
+  "lint": {
+    "rules": ["polymer-2"]
+  }
+}
