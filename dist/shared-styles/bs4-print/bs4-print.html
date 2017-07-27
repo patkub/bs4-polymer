@@ -1,0 +1,16 @@
+<!--
+`<bs4-shared-styles-print>` Shared styles for `<bs4-print>`.
+
+### Styling
+
+In typical use, import the element, and include it's styles
+
+    <dom-module id="foo">
+        <template>
+            <style include="bs4-shared-styles-print"></style>
+-->
+<dom-module id="bs4-shared-styles-print">
+  <template>
+    <style>@media print{*,::after,::before,blockquote::first-letter,blockquote::first-line,div::first-letter,div::first-line,li::first-letter,li::first-line,p::first-letter,p::first-line{text-shadow:none!important;box-shadow:none!important}a,a:visited{text-decoration:underline}abbr[title]::after{content:" (" attr(title) ")"}pre{white-space:pre-wrap!important}blockquote,pre{border:1px solid #999}thead{display:table-header-group}blockquote,img,pre,tr{page-break-inside:avoid}h2,h3,p{orphans:3;widows:3}h2,h3{page-break-after:avoid}.navbar{display:none}.badge{border:1px solid #000}.table{border-collapse:collapse!important}.table td,.table th{background-color:#fff!important}.table-bordered td,.table-bordered th{border:1px solid #ddd!important}}</style>
+  </template>
+</dom-module>
