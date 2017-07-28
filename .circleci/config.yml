@@ -15,9 +15,6 @@ jobs:
           name: npm-version
           command: 'npm --version'
       - run:
-          name: nvm-version
-          command: 'nvm --version'
-      - run:
           name: yarn-version
           command: 'yarn --version'
       - run:
