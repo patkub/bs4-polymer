@@ -1,6 +1,7 @@
 # Bootstrap 4 Polymer Elements & Shared Styles
 
 [![GitHub version](https://badge.fury.io/gh/patkub%2Fbs4-polymer.svg)](https://badge.fury.io/gh/patkub%2Fbs4-polymer)
+[![Circle CI](https://circleci.com/gh/patkub/bs4-polymer.svg?style=shield&circle-token=503d43acd590abe00a8f97f12a92918a150194e1)](https://circleci.com/gh/patkub/bs4-polymer)
 [![npm version](https://badge.fury.io/js/bs4-polymer.svg)](https://badge.fury.io/js/bs4-polymer)
 [![dependencies Status](https://david-dm.org/patkub/bs4-polymer/status.svg)](https://david-dm.org/patkub/bs4-polymer)
 [![devDependencies Status](https://david-dm.org/patkub/bs4-polymer/dev-status.svg)](https://david-dm.org/patkub/bs4-polymer?type=dev)
