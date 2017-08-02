@@ -8,7 +8,7 @@
   "files": [
     "dist/",
     "src/",
-    "*.*",
+    "*.*"
   ],
   "dependencies": {
     "@npm-polymer/polymer": "^2.0.1",
