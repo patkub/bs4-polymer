@@ -3,5 +3,5 @@ bower_components/
 .sass-cache
 *.min.*
 analysis.json
-dist/elements/
-dist/shared-styles/
+dist/*
+!dist/.npmignore
