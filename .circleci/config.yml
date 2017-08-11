@@ -7,7 +7,8 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - cache-install
+            - cache-lint-{{ checksum "package.json" }}
+            - cache-lint
       - run:
           name: node-version
           command: 'node --version'
@@ -24,7 +25,12 @@ jobs:
           name: yarn-install
           command: 'yarn install'
       - save_cache:
-          key: cache-install
+          key: cache-lint-{{ checksum "package.json" }}
+          paths:
+            - ~/.cache/yarn
+            - node_modules
+      - save_cache:
+          key: cache-lint
           paths:
             - ~/.cache/yarn
             - node_modules
@@ -36,7 +42,8 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - cache-install
+            - cache-build-{{ checksum "package.json" }}
+            - cache-build
       - run:
           name: node-version
           command: 'node --version'
@@ -53,14 +60,59 @@ jobs:
           name: yarn-install
           command: 'yarn install'
       - save_cache:
-          key: cache-install
+          key: cache-build-{{ checksum "package.json" }}
+          paths:
+            - ~/.cache/yarn
+            - node_modules
+      - save_cache:
+          key: cache-build
           paths:
             - ~/.cache/yarn
             - node_modules
       - run: yarn run build
+  lockfile:
+    docker:
+      - image: circleci/node:6
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - cache-lockfile-{{ checksum "package.json" }}
+            - cache-lockfile
+      - run:
+          name: node-version
+          command: 'node --version'
+      - run:
+          name: npm-version
+          command: 'npm --version'
+      - run:
+          name: yarn-version
+          command: 'yarn --version'
+      - run:
+          name: yarn-install-global
+          command: 'sudo yarn global add greenkeeper-lockfile@1'
+      - run:
+          name: greenkeeper-lockfile-update
+          command: 'greenkeeper-lockfile-update'
+      - run:
+          name: greenkeeper-lockfile-upload
+          command: 'greenkeeper-lockfile-upload'
+      - save_cache:
+          key: cache-lockfile-{{ checksum "package.json" }}
+          paths:
+            - ~/.cache/yarn
+      - save_cache:
+          key: cache-lockfile
+          paths:
+            - ~/.cache/yarn
 workflows:
   version: 2
   build_and_lint:
     jobs:
       - lint
       - build
+      - lockfile:
+          filters:
+            branches:
+              only:
+                - /^greenkeeper-.*$/
