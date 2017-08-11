@@ -1,0 +1,122 @@
+<!-- Polymer Library -->
+<link rel="import" href="../../../../@npm-polymer/polymer/polymer-element.html">
+
+<!-- Shared Styles button -->
+<link rel="import" href="../../shared-styles/bs4-buttons/bs4-buttons.html">
+
+<!--
+`<bs4-button>` Use Bootstrap’s custom button styles for actions in forms,
+dialogs, and more. Includes support for a handful of contextual variations,
+sizes, states, and more.
+
+In typical use, add the element to your body:
+
+    <body>
+      <bs4-button text="Default"></bs4-button>
+-->
+<dom-module id="bs4-button">
+  <template>
+    <style include="bs4-shared-styles-buttons">
+      a {
+        text-decoration: none;
+      }
+    </style>
+    
+    <a href="{{link}}" class$="btn {{_btnClassesChanged(context, outline, size, block, disabled)}}"
+      role="button" aria-pressed="true">{{text}}</a>
+  </template>
+  
+  <script>
+    /** Class representing the button. */
+    class BS4button extends Polymer.Element {
+      /** HTML tag name. */
+      static get is() {
+        return 'bs4-button';
+      }
+      
+      /** Declared properties. */
+      static get properties() {
+        return {
+          /** context: `primary`, `secondary`, `success`, `info`, `warning`, or `danger` */
+          context: {
+            type: String,
+            value: 'primary',
+            reflectToAttribute: true,
+          },
+          
+          /** Whether this button has an outline. */
+          outline: {
+            type: Boolean,
+            value: false,
+            reflectToAttribute: true,
+          },
+          
+          /** Button size: `lg` or `sm` or empty. */
+          size: {
+            type: String,
+            reflectToAttribute: true,
+          },
+          
+          /** Whether this button is block level. */
+          block: {
+            type: Boolean,
+            value: false,
+            reflectToAttribute: true,
+          },
+          
+          /** Whether this button is disabled. */
+          disabled: {
+            type: Boolean,
+            value: false,
+            reflectToAttribute: true,
+          },
+          
+          /** Button text */
+          text: String,
+          
+          /** Button link */
+          link: String,
+        };
+      }
+      
+      /** Observers. */
+      static get observers() {
+        return [
+          // Button classes changed
+          '_btnClassesChanged(context, outline, large, block, disabled)',
+        ];
+      }
+      
+      /**
+       * Button classes changed observer.
+       *
+       * @param {String} context - new context.
+       * @param {Boolean} outline - new outline.
+       * @param {Boolean} size - new size.
+       * @param {Boolean} block - new block.
+       * @param {Boolean} disabled - new disabled.
+       */
+      _btnClassesChanged(context, outline, size, block, disabled) {
+        let classes = '';
+        if (context) {
+          classes += 'btn-' + context + ' ';
+        }
+        if (outline) {
+          classes += 'btn-outline-' + context;
+        }
+        if (size) {
+          classes += 'btn-' + size;
+        }
+        if (block) {
+          classes += 'btn-block';
+        }
+        if (disabled) {
+          classes += 'disabled';
+        }
+        return classes;
+      }
+    }
+
+    window.customElements.define(BS4button.is, BS4button);
+  </script>
+</dom-module>

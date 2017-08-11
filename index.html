@@ -13,7 +13,7 @@
     If deploying to a non-root path, replace href="/" with the full path to the project root.
     For example: href="/polymer-starter-kit/relative-path-example/"
   -->
-  <base href="/">
+  <base href="/bs4-polymer/">
 
   <!-- Load webcomponents-lite.js to check and load any polyfills the browser needs -->
   <script src="node_modules/@npm-polymer/webcomponentsjs/webcomponents-loader.js"></script>
@@ -30,6 +30,7 @@
   <link rel="import" href="dist/elements/bs4-alert/bs4-alert.html">
   <link rel="import" href="dist/elements/bs4-badge/bs4-badge.html">
   <link rel="import" href="dist/elements/bs4-jumbotron/bs4-jumbotron.html">
+  <link rel="import" href="dist/elements/bs4-button/bs4-button.html">
 </head>
 
 <body>
@@ -61,7 +62,27 @@
         <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
       </p>
     </bs4-jumbotron>
+    
+    
+    <bs4-button text="Default" link="#"></bs4-button>
+    <bs4-button context="danger" text="Danger" link="#"></bs4-button>
+    <bs4-button context="primary" outline="true" text="Outline" link="#"></bs4-button>
+    <bs4-button context="secondary" text="Secondary" link="#"></bs4-button>
+    <bs4-button context="secondary" text="Disabled" link="#" disabled="true"></bs4-button>
+    
+    <br><br>
+    
+    <bs4-button context="primary" block="true" text="Block Level" link="#"></bs4-button>
+    <bs4-button context="secondary" block="true" text="Block Level" link="#"></bs4-button>
+    
+    <br><br>
+    
+    <bs4-button text="Large" link="#" size="lg"></bs4-button>
+    <bs4-button text="Small" link="#" size="sm"></bs4-button>
+    
+    <br><br><br>
+    
   </div>
-      
+  
 </body>
 </html>
