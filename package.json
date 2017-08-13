@@ -13,7 +13,7 @@
   "dependencies": {
     "@npm-polymer/polymer": "^2.0.1",
     "@npm-polymer/webcomponentsjs": "^1.0.1",
-    "bootstrap": "4.0.0-alpha.6"
+    "bootstrap": "4.0.0-beta"
   },
   "devDependencies": {
     "babel-preset-es2015": "^6.24.1",
