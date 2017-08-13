@@ -1,6 +1,9 @@
 <!-- Polymer Library -->
 <link rel="import" href="../../../../@npm-polymer/polymer/polymer-element.html">
 
+<!-- Context Mixin -->
+<link rel="import" href="../mixins/bs4-context-mixin.html">
+
 <!-- Shared Styles Alert -->
 <link rel="import" href="../../shared-styles/bs4-alert/bs4-alert.html">
 
@@ -24,21 +27,13 @@ In typical use, add the element to your body:
   
   <script>
     /** Class representing the alert. */
-    class BS4Alert extends Polymer.Element {
+    class BS4Alert extends BS4ContextMixin(Polymer.Element) {
       /** HTML tag name. */
       static get is() {
         return 'bs4-alert';
       }
-      
-      /** Declared properties. */
-      static get properties() {
-        return {
-          /** context: `success`, `info`, `warning`, or `danger` */
-          context: String,
-        };
-      }
     }
-
+    
     window.customElements.define(BS4Alert.is, BS4Alert);
   </script>
 </dom-module>

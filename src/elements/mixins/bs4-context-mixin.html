@@ -1,0 +1,14 @@
+<script>
+  /* eslint no-unused-vars: 0 */
+  
+  /* @polymerMixin */
+  const BS4ContextMixin = (superclass) => class extends superclass {
+    /** Declared properties. */
+    static get properties() {
+      return {
+        /** context: `primary`, `secondary`, `success`, `danger`, `warning`, `info`, `light`, or `dark` */
+        context: String,
+      };
+    }
+  };
+</script>
