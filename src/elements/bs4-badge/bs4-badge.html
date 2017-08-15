@@ -20,7 +20,7 @@ In typical use, add the element to your body:
   <template>
     <style include="bs4-shared-styles-badge"></style>
 
-    <span class$="badge {{type}} badge-{{context}}">{{text}}</span>
+    <span class$="badge {{_badgeClassesChanged(context, pill)}}">{{text}}</span>
   </template>
   
   <script>
@@ -37,15 +37,42 @@ In typical use, add the element to your body:
       /** Declared properties. */
       static get properties() {
         return {
-          /** type: `` or `badge-pill` to make badges more rounded */
-          type: {
-            type: String,
-            value: '',
+          /** Whether badge is a pill */
+          pill: {
+            type: Boolean,
+            value: false,
+            reflectToAttribute: true,
           },
           
           /** Text content */
           text: String,
         };
+      }
+      
+      /** Observers. */
+      static get observers() {
+        return [
+          // Badge classes changed
+          '_badgeClassesChanged(context, type)',
+        ];
+      }
+      
+      /**
+       * Badge classes changed observer.
+       *
+       * @param {String} context - new context.
+       * @param {Boolean} pill - new pill.
+       * @return {String} badge classes.
+       */
+      _badgeClassesChanged(context, pill) {
+        let classes = '';
+        if (context) {
+          classes += 'badge-' + context + ' ';
+        }
+        if (pill) {
+          classes += 'badge-pill' + ' ';
+        }
+        return classes;
       }
     }
 

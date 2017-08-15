@@ -21,6 +21,7 @@
   <!-- Bootstrap JS -->
   <script defer src="node_modules/jquery/dist/jquery.slim.min.js"></script>
   <script defer src="node_modules/tether/dist/js/tether.min.js"></script>
+  <script defer src="node_modules/popper.js/dist/umd/popper.min.js"></script>
   <script defer src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   
   <!-- Bootstrap Core CSS -->
@@ -31,6 +32,7 @@
   <link rel="import" href="dist/elements/bs4-badge/bs4-badge.html">
   <link rel="import" href="dist/elements/bs4-jumbotron/bs4-jumbotron.html">
   <link rel="import" href="dist/elements/bs4-button/bs4-button.html">
+  <link rel="import" href="dist/elements/bs4-badge/bs4-badge.html">
 </head>
 
 <body>
@@ -61,10 +63,6 @@
       This is a <strong>dark</strong> alert—check it out!
     </bs4-alert>
     
-    <bs4-badge context="default" text="Default"></bs4-badge>
-    <bs4-badge context="default" text="Default" type="badge-pill"></bs4-badge>
-    <h1>Example heading <bs4-badge context="default" text="New"></bs4-badge></h1>
-    
     <bs4-jumbotron>
       <h1 class="display-3">Hello, world!</h1>
       <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
@@ -91,6 +89,25 @@
     
     <bs4-button text="Large" link="#" size="lg"></bs4-button>
     <bs4-button text="Small" link="#" size="sm"></bs4-button>
+    
+    <br><br>
+    
+    <bs4-badge context="primary" text="New"></bs4-badge>
+    <bs4-badge context="secondary" text="New"></bs4-badge>
+    <bs4-badge context="success" text="New"></bs4-badge>
+    <bs4-badge context="info" text="New"></bs4-badge>
+    <bs4-badge context="warning" text="New"></bs4-badge>
+    <bs4-badge context="danger" text="New"></bs4-badge>
+    
+    <h1>Example heading <bs4-badge context="default" text="New"></bs4-badge></h1>
+    
+    <bs4-badge context="primary" text="New" pill="true"></bs4-badge>
+    <bs4-badge context="secondary" text="New" pill="true"></bs4-badge>
+    <bs4-badge context="success" text="New" pill="true"></bs4-badge>
+    <bs4-badge context="info" text="New" pill="true"></bs4-badge>
+    <bs4-badge context="warning" text="New" pill="true"></bs4-badge>
+    <bs4-badge context="danger" text="New" pill="true"></bs4-badge>
+    
     
     <br><br><br>
     
