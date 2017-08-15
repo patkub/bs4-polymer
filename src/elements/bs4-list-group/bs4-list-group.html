@@ -1,6 +1,9 @@
 <!-- Polymer Library -->
 <link rel="import" href="../../../../@npm-polymer/polymer/polymer-element.html">
 
+<!-- Template Repeater -->
+<link rel="import" href="../../../../@npm-polymer/polymer/polymer/lib/elements/dom-repeat.html">
+
 <!-- Shared Styles List Group -->
 <link rel="import" href="../../shared-styles/bs4-list-group/bs4-list-group.html">
 
@@ -16,6 +19,12 @@ In typical use, add the element to your body:
 <dom-module id="bs4-list-group">
   <template>
     <style include="bs4-shared-styles-list-group"></style>
+    
+    <ul class="list-group">
+      <template is="dom-repeat" items="{{items}}">
+        <li class="list-group-item">[[item.text]]</li>
+      </template>
+    </ul>
     
   </template>
   
@@ -33,7 +42,14 @@ In typical use, add the element to your body:
       /** Declared properties. */
       static get properties() {
         return {
-          /** Items */
+          /** 
+           * Items
+           * {Object} items
+           * {String} item.text
+           * {Boolean} item.active
+           * {Boolean} item.disabled
+           * {Boolean} item.context
+           */
           items: Object,
         };
       }
