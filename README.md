@@ -7,7 +7,6 @@
 [![devDependencies Status](https://david-dm.org/patkub/bs4-polymer/dev-status.svg)](https://david-dm.org/patkub/bs4-polymer?type=dev)
 [![Greenkeeper badge](https://badges.greenkeeper.io/patkub/bs4-polymer.svg)](https://greenkeeper.io/)
 
-
 > [Bootstrap 4](http://getbootstrap.com/) elements and shared styles for [Polymer 2](https://www.polymer-project.org/).
 
 [Docs](https://patkub.github.io/bs4-polymer/) | [Bootstrap 4](http://getbootstrap.com/) | [Polymer 2](https://www.polymer-project.org/)
