@@ -1,0 +1,47 @@
+<!-- Polymer Library -->
+<link rel="import" href="../../../../@npm-polymer/polymer/polymer-element.html">
+
+<!-- Context Mixin -->
+<link rel="import" href="../mixins/bs4-context-mixin.html">
+
+<!-- Shared Styles List Group -->
+<link rel="import" href="../../shared-styles/bs4-list-group/bs4-list-group.html">
+
+<!--
+`<bs4-list-group>` Small and adaptive tag for adding context to just about any
+content.
+
+In typical use, add the element to your body:
+
+    <body>
+      <bs4-list-group></bs4-list-group>
+-->
+<dom-module id="bs4-list-group">
+  <template>
+    <style include="bs4-shared-styles-list-group"></style>
+    
+  </template>
+  
+  <script>
+    /* eslint new-cap: [2, {"capIsNewExceptions": ["BS4ContextMixin"]}]
+       no-undef: 0 */
+    
+    /** Class representing the list-group. */
+    class BS4ListGroup extends BS4ContextMixin(Polymer.Element) {
+      /** HTML tag name. */
+      static get is() {
+        return 'bs4-list-group';
+      }
+      
+      /** Declared properties. */
+      static get properties() {
+        return {
+          /** Items */
+          items: Object,
+        };
+      }
+    }
+
+    window.customElements.define(BS4ListGroup.is, BS4ListGroup);
+  </script>
+</dom-module>
