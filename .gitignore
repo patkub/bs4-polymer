@@ -2,6 +2,7 @@ node_modules/
 bower_components/
 .sass-cache
 *.min.*
+*.log
 analysis.json
 dist/*
 !dist/.npmignore

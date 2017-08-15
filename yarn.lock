@@ -957,8 +957,8 @@ eslint-config-google@^0.9.1:
   resolved "https://registry.yarnpkg.com/eslint-config-google/-/eslint-config-google-0.9.1.tgz#83353c3dba05f72bb123169a4094f4ff120391eb"
 
 eslint-plugin-html@^3.1.1:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-html/-/eslint-plugin-html-3.1.1.tgz#d6c03796e89ac6b735da6fef9ca9162b423daee3"
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-html/-/eslint-plugin-html-3.2.0.tgz#fb64c2789e9582b97f580a38814a57966f91a7b2"
   dependencies:
     htmlparser2 "^3.8.2"
 
@@ -1810,6 +1810,10 @@ isstream@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
 
+jquery@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.2.1.tgz#5c4d9de652af6cd0a770154a631bba12b015c787"
+
 js-base64@^2.1.8:
   version "2.1.9"
   resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.1.9.tgz#f0e80ae039a4bd654b5f281fc93f04a914a7fcce"
@@ -2441,6 +2445,10 @@ pluralize@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-4.0.0.tgz#59b708c1c0190a2f692f1c7618c446b052fd1762"
 
+popper.js@^1.12.1:
+  version "1.12.1"
+  resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.12.1.tgz#623f3c6124ffbc065c39c100b223d6bd4b659303"
+
 prelude-ls@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.1.2.tgz#21932a549f5e52ffd9a827f570e04be62a97da54"
@@ -2474,8 +2482,8 @@ punycode@^1.4.1:
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-1.4.1.tgz#c0d5a63b2718800ad8e1eb0fa5269c84dd41845e"
 
 q@^1.1.2:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/q/-/q-1.5.0.tgz#dd01bac9d06d30e6f219aecb8253ee9ebdc308f1"
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/q/-/q-1.4.1.tgz#55705bcd93c5f3673530c2c2cbc0c2b3addc286e"
 
 qs@~6.4.0:
   version "6.4.0"
@@ -2939,6 +2947,10 @@ tar@^2.0.0:
     block-stream "*"
     fstream "^1.0.2"
     inherits "2"
+
+tether@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/tether/-/tether-1.4.0.tgz#0f9fa171f75bf58485d8149e94799d7ae74d1c1a"
 
 text-table@~0.2.0:
   version "0.2.0"
