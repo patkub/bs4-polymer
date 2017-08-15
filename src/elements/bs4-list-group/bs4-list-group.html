@@ -29,11 +29,8 @@ In typical use, add the element to your body:
   </template>
   
   <script>
-    /* eslint new-cap: [2, {"capIsNewExceptions": ["BS4ContextMixin"]}]
-       no-undef: 0 */
-    
     /** Class representing the list-group. */
-    class BS4ListGroup extends BS4ContextMixin(Polymer.Element) {
+    class BS4ListGroup extends Polymer.Element {
       /** HTML tag name. */
       static get is() {
         return 'bs4-list-group';
