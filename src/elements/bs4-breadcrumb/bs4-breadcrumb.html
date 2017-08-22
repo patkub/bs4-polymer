@@ -1,0 +1,67 @@
+<!-- Polymer Library -->
+<link rel="import" href="../../../../@npm-polymer/polymer/polymer-element.html">
+
+<!-- Dom If -->
+<link rel="import" href="../../../../@npm-polymer/polymer/lib/elements/dom-if.html">
+
+<!-- Template Repeater -->
+<link rel="import" href="../../../../@npm-polymer/polymer/lib/elements/dom-repeat.html">
+
+<!-- Shared Styles Breadcrumb -->
+<link rel="import" href="../../shared-styles/bs4-breadcrumb/bs4-breadcrumb.html">
+
+<!--
+`<bs4-breadcrumb>` Small and adaptive tag for adding context to just about any
+content.
+
+In typical use, add the element to your body:
+
+    <body>
+      <bs4-breadcrumb></bs4-breadcrumb>
+-->
+<dom-module id="bs4-breadcrumb">
+  <template>
+    <style include="bs4-shared-styles-breadcrumb">
+      a {
+        text-decoration: none;
+      }
+    </style>
+    
+    <ol class="breadcrumb">
+      <template is="dom-repeat" items="{{items}}">
+        <li class="breadcrumb-item">
+          <template is="dom-if" if="[[!item.link]]">
+            [[item.text]]
+          </template>
+          <template is="dom-if" if="[[item.link]]">
+            <a href="[[item.link]]">[[item.text]]</a>
+          </template>
+        </li>
+       </template>
+    </ol>
+  </template>
+  
+  <script>
+    /** Class representing the breadcrumb. */
+    class BS4Breadcrumb extends Polymer.Element {
+      /** HTML tag name. */
+      static get is() {
+        return 'bs4-breadcrumb';
+      }
+      
+      /** Declared properties. */
+      static get properties() {
+        return {
+          /**
+           * Breadcrumb items.
+           *
+           * @type {{text: string, active: boolean, context: string}}
+           */
+          items: Object,
+        };
+      }
+    }
+
+    window.customElements.define(BS4Breadcrumb.is, BS4Breadcrumb);
+  </script>
+</dom-module>
