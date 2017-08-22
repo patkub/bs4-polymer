@@ -22,7 +22,7 @@ In typical use, add the element to your body:
     
     <ul class="list-group">
       <template is="dom-repeat" items="{{items}}">
-        <li class="list-group-item">[[item.text]]</li>
+        <li class$="list-group-item [[_listClassesChanged(item.active, item.context)]]">[[item.text]]</li>
       </template>
     </ul>
     
@@ -44,11 +44,36 @@ In typical use, add the element to your body:
            * {Object} items
            * {String} item.text
            * {Boolean} item.active
-           * {Boolean} item.disabled
-           * {Boolean} item.context
+           * {String} item.context
            */
           items: Object,
         };
+      }
+      
+      /** Observers. */
+      static get observers() {
+        return [
+          // List Group classes changed
+          '_listClassesChanged(active, context)',
+        ];
+      }
+      
+      /**
+       * List group classes changed observer.
+       *
+       * @param {Boolean} active - new active.
+       * @param {String} context - new context.
+       * @return {String} list group classes.
+       */
+      _listClassesChanged(active, context) {
+        let classes = '';
+        if (active) {
+          classes += 'active ';
+        }
+        if (context) {
+          classes += 'list-group-item-' + context + ' ';
+        }
+        return classes;
       }
     }
 
