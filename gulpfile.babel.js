@@ -9,6 +9,7 @@ import gulp from 'gulp';
 import sass from 'gulp-sass';
 import cleanCSS from 'gulp-clean-css';
 import rename from 'gulp-rename';
+import replace from 'gulp-replace';
 import inlineSource from 'gulp-inline-source';
 
 /**
@@ -20,6 +21,9 @@ gulp.task('sass', function() {
     .pipe(cleanCSS({
       level: 2,
     }))
+    // Replace :last-child selector with :last-of-type, for compatibility with
+    // Polymer's template element nested inside elements.
+    .pipe(replace(':last-child', ':last-of-type'))
     .pipe(rename({
       suffix: '.min',
       extname: '.css',
