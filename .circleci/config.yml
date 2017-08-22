@@ -24,6 +24,7 @@ jobs:
       - run:
           name: yarn-install
           command: 'yarn install'
+      - run: yarn run lint
       - save_cache:
           key: cache-lint-{{ checksum "package.json" }}
           paths:
@@ -34,7 +35,6 @@ jobs:
           paths:
             - ~/.cache/yarn
             - node_modules
-      - run: yarn run lint
   build:
     docker:
       - image: circleci/node:6
@@ -59,6 +59,7 @@ jobs:
       - run:
           name: yarn-install
           command: 'yarn install'
+      - run: yarn run build
       - save_cache:
           key: cache-build-{{ checksum "package.json" }}
           paths:
@@ -69,7 +70,6 @@ jobs:
           paths:
             - ~/.cache/yarn
             - node_modules
-      - run: yarn run build
   lockfile:
     docker:
       - image: circleci/node:6
