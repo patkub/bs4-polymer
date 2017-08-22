@@ -39,12 +39,10 @@ In typical use, add the element to your body:
       /** Declared properties. */
       static get properties() {
         return {
-          /** 
-           * Items
-           * {Object} items
-           * {String} item.text
-           * {Boolean} item.active
-           * {String} item.context
+          /**
+           * List group items.
+           *
+           * @type {{text: string, active: boolean, context: string}}
            */
           items: Object,
         };
@@ -61,9 +59,9 @@ In typical use, add the element to your body:
       /**
        * List group classes changed observer.
        *
-       * @param {Boolean} active - new active.
-       * @param {String} context - new context.
-       * @return {String} list group classes.
+       * @param {boolean} active - new active.
+       * @param {string} context - new context.
+       * @return {string} list group classes.
        */
       _listClassesChanged(active, context) {
         let classes = '';
