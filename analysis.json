@@ -112,17 +112,17 @@
           "params": [
             {
               "name": "context",
-              "type": "String",
+              "type": "string",
               "description": "new context."
             },
             {
               "name": "pill",
-              "type": "Boolean",
+              "type": "boolean",
               "description": "new pill."
             }
           ],
           "return": {
-            "type": "String",
+            "type": "string",
             "desc": "badge classes."
           }
         }
@@ -347,32 +347,32 @@
           "params": [
             {
               "name": "context",
-              "type": "String",
+              "type": "string",
               "description": "new context."
             },
             {
               "name": "outline",
-              "type": "Boolean",
+              "type": "boolean",
               "description": "new outline."
             },
             {
               "name": "size",
-              "type": "Boolean",
+              "type": "boolean",
               "description": "new size."
             },
             {
               "name": "block",
-              "type": "Boolean",
+              "type": "boolean",
               "description": "new block."
             },
             {
               "name": "disabled",
-              "type": "Boolean",
+              "type": "boolean",
               "description": "new disabled."
             }
           ],
           "return": {
-            "type": "String",
+            "type": "string",
             "desc": "button classes."
           }
         }
@@ -616,16 +616,16 @@
       "properties": [
         {
           "name": "items",
-          "type": "Object",
-          "description": "Items\n{Object} items\n{String} item.text\n{Boolean} item.active\n{String} item.context",
+          "type": "{text: string, active: boolean, context: string}",
+          "description": "List group items.",
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 48,
+              "line": 46,
               "column": 10
             },
             "end": {
-              "line": 48,
+              "line": 46,
               "column": 23
             }
           },
@@ -641,11 +641,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 67,
+              "line": 65,
               "column": 6
             },
             "end": {
-              "line": 76,
+              "line": 74,
               "column": 7
             }
           },
@@ -653,17 +653,17 @@
           "params": [
             {
               "name": "active",
-              "type": "Boolean",
+              "type": "boolean",
               "description": "new active."
             },
             {
               "name": "context",
-              "type": "String",
+              "type": "string",
               "description": "new context."
             }
           ],
           "return": {
-            "type": "String",
+            "type": "string",
             "desc": "list group classes."
           }
         }
@@ -677,7 +677,7 @@
           "column": 4
         },
         "end": {
-          "line": 77,
+          "line": 75,
           "column": 5
         }
       },
@@ -687,19 +687,19 @@
       "attributes": [
         {
           "name": "items",
-          "description": "Items\n{Object} items\n{String} item.text\n{Boolean} item.active\n{String} item.context",
+          "description": "List group items.",
           "sourceRange": {
             "start": {
-              "line": 48,
+              "line": 46,
               "column": 10
             },
             "end": {
-              "line": 48,
+              "line": 46,
               "column": 23
             }
           },
           "metadata": {},
-          "type": "Object"
+          "type": "{text: string, active: boolean, context: string}"
         }
       ],
       "events": [],
@@ -715,7 +715,7 @@
     {
       "description": " ",
       "summary": "",
-      "path": "elements\\mixins\\bs4-context-mixin.html",
+      "path": "mixins\\bs4-context-mixin.html",
       "properties": [
         {
           "name": "context",
