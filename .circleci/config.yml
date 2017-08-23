@@ -109,12 +109,12 @@ workflows:
   version: 2
   build_and_lint:
     jobs:
-      - lint
+      - lint:
           filters:
             branches:
               ignore:
                 - gh-pages
-      - build
+      - build:
           filters:
             branches:
               ignore:
