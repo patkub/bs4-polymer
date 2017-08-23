@@ -110,7 +110,15 @@ workflows:
   build_and_lint:
     jobs:
       - lint
+          filters:
+            branches:
+              ignore:
+                - gh-pages
       - build
+          filters:
+            branches:
+              ignore:
+                - gh-pages
       - lockfile:
           filters:
             branches:
