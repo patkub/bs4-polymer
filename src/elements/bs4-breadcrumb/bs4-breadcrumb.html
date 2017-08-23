@@ -17,7 +17,11 @@ content.
 In typical use, add the element to your body:
 
     <body>
-      <bs4-breadcrumb></bs4-breadcrumb>
+      <bs4-breadcrumb items='[
+        {"text": "Home", "link": "#", "active": false},
+        {"text": "Library", "link": "#", "active": false},
+        {"text": "Data", "link": "#", "active": false},
+        {"text": "Bootstrap", "link": "#", "active": true}]'></bs4-breadcrumb>
 -->
 <dom-module id="bs4-breadcrumb">
   <template>

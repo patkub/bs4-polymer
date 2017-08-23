@@ -8,13 +8,16 @@
 <link rel="import" href="../../shared-styles/bs4-list-group/bs4-list-group.html">
 
 <!--
-`<bs4-list-group>` Small and adaptive tag for adding context to just about any
-content.
+`<bs4-list-group>` List groups are a flexible and powerful component for
+displaying a series of content.
 
 In typical use, add the element to your body:
 
     <body>
-      <bs4-list-group></bs4-list-group>
+      <bs4-list-group items='[
+        {"text": "Item 1"},
+        {"text": "Item 2", "active": "true"},
+        {"text": "Item 3", "context": "primary"}]'></bs4-list-group>
 -->
 <dom-module id="bs4-list-group">
   <template>
