@@ -25,19 +25,22 @@ In typical use, add the element to your body:
       a {
         text-decoration: none;
       }
+      a:hover {
+        text-decoration: underline;
+      }
     </style>
     
     <ol class="breadcrumb">
       <template is="dom-repeat" items="{{items}}">
-        <li class="breadcrumb-item">
-          <template is="dom-if" if="[[!item.link]]">
-            [[item.text]]
-          </template>
-          <template is="dom-if" if="[[item.link]]">
+        <li class$="breadcrumb-item [[_itemActiveClass(item.active)]]">
+          <template is="dom-if" if="[[_itemLink(item.active, item.link)]]">
             <a href="[[item.link]]">[[item.text]]</a>
           </template>
+          <template is="dom-if" if="[[!_itemLink(item.active, item.link)]]">
+            [[item.text]]
+          </template>
         </li>
-       </template>
+      </template>
     </ol>
   </template>
   
@@ -59,6 +62,37 @@ In typical use, add the element to your body:
            */
           items: Object,
         };
+      }
+      
+      /** Observers. */
+      static get observers() {
+        return [
+          // Breadcrumb active
+          '_itemActiveClass(active)',
+          '_itemLink(active, link)',
+        ];
+      }
+      
+      /**
+       * List group active classes.
+       *
+       * @param {boolean} active - item is active.
+       * @param {boolean} link - item link is not null.
+       * @return {string} classes.
+       */
+      _itemActiveClass(active) {
+        return active ? 'active' : '';
+      }
+      
+      /**
+       * List group link.
+       *
+       * @param {boolean} active - item is active.
+       * @param {boolean} link - item link is not null.
+       * @return {string} classes.
+       */
+      _itemLink(active, link) {
+        return (!active && link);
       }
     }
 

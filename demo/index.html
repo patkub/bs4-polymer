@@ -34,6 +34,9 @@
 <body>
 
   <div class="container">
+    
+    <h1>Alerts</h1>
+    
     <bs4-alert context="primary">
       This is a <strong>primary</strong> alert—check it out!
     </bs4-alert>
@@ -59,34 +62,8 @@
       This is a <strong>dark</strong> alert—check it out!
     </bs4-alert>
     
-    <bs4-jumbotron>
-      <h1 class="display-3">Hello, world!</h1>
-      <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-      <hr class="my-4">
-      <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-      <p class="lead">
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-      </p>
-    </bs4-jumbotron>
-    
-    
-    <bs4-button text="Default" link="#"></bs4-button>
-    <bs4-button context="danger" text="Danger" link="#"></bs4-button>
-    <bs4-button context="primary" outline="true" text="Outline" link="#"></bs4-button>
-    <bs4-button context="secondary" text="Secondary" link="#"></bs4-button>
-    <bs4-button context="secondary" text="Disabled" link="#" disabled="true"></bs4-button>
-    
-    <br><br>
-    
-    <bs4-button context="primary" block="true" text="Block Level" link="#"></bs4-button>
-    <bs4-button context="secondary" block="true" text="Block Level" link="#"></bs4-button>
-    
-    <br><br>
-    
-    <bs4-button text="Large" link="#" size="lg"></bs4-button>
-    <bs4-button text="Small" link="#" size="sm"></bs4-button>
-    
-    <br><br>
+    <br>
+    <h1>Badge</h1>
     
     <bs4-badge context="primary" text="New"></bs4-badge>
     <bs4-badge context="secondary" text="New"></bs4-badge>
@@ -104,7 +81,39 @@
     <bs4-badge context="warning" text="New" pill="true"></bs4-badge>
     <bs4-badge context="danger" text="New" pill="true"></bs4-badge>
     
+    <br><br><br>
+    <h1>Jumbotron</h1>
+    
+    <bs4-jumbotron>
+      <h1 class="display-3">Hello, world!</h1>
+      <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+      <hr class="my-4">
+      <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+      <p class="lead">
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+      </p>
+    </bs4-jumbotron>
+    
+    <h1>Buttons</h1>
+    
+    <bs4-button text="Default" link="#"></bs4-button>
+    <bs4-button context="danger" text="Danger" link="#"></bs4-button>
+    <bs4-button context="primary" outline="true" text="Outline" link="#"></bs4-button>
+    <bs4-button context="secondary" text="Secondary" link="#"></bs4-button>
+    <bs4-button context="secondary" text="Disabled" link="#" disabled="true"></bs4-button>
+    
     <br><br>
+    
+    <bs4-button context="primary" block="true" text="Block Level" link="#"></bs4-button>
+    <bs4-button context="secondary" block="true" text="Block Level" link="#"></bs4-button>
+    
+    <br>
+    
+    <bs4-button text="Large" link="#" size="lg"></bs4-button>
+    <bs4-button text="Small" link="#" size="sm"></bs4-button>
+    
+    <br><br>
+    <h1>List Group</h1>
     
     <bs4-list-group items='[
         {"text": "Item 1"},
@@ -119,10 +128,13 @@
         {"text": "Item 10", "context": "dark"}]'></bs4-list-group>
     
     <br><br>
+    <h1>Breadcrumb</h1>
     
     <bs4-breadcrumb items='[
-        {"text": "Item 1"},
-        {"text": "Item 2", "link": "#"}]'></bs4-breadcrumb>
+        {"text": "Home", "link": "#", "active": false},
+        {"text": "Library", "link": "#", "active": false},
+        {"text": "Data", "link": "#", "active": false},
+        {"text": "Bootstrap", "link": "#", "active": true}]'></bs4-breadcrumb>
     
     <br><br>
     
