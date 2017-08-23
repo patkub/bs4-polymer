@@ -186,6 +186,134 @@
       "tagname": "bs4-badge"
     },
     {
+      "description": "`<bs4-breadcrumb>` Small and adaptive tag for adding context to just about any\ncontent.\n\nIn typical use, add the element to your body:\n\n    <body>\n      <bs4-breadcrumb></bs4-breadcrumb>\n\nClass representing the breadcrumb.",
+      "summary": "",
+      "path": "elements\\bs4-breadcrumb\\bs4-breadcrumb.html",
+      "properties": [
+        {
+          "name": "items",
+          "type": "{text: string, link: string, active: boolean}",
+          "description": "Breadcrumb items.",
+          "privacy": "public",
+          "sourceRange": {
+            "start": {
+              "line": 62,
+              "column": 10
+            },
+            "end": {
+              "line": 62,
+              "column": 23
+            }
+          },
+          "metadata": {
+            "polymer": {}
+          }
+        }
+      ],
+      "methods": [
+        {
+          "name": "_itemActiveClass",
+          "description": "Breadcrumb active class observer.",
+          "privacy": "protected",
+          "sourceRange": {
+            "start": {
+              "line": 84,
+              "column": 6
+            },
+            "end": {
+              "line": 86,
+              "column": 7
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "active",
+              "type": "boolean",
+              "description": "item is active."
+            }
+          ],
+          "return": {
+            "type": "string",
+            "desc": "classes."
+          }
+        },
+        {
+          "name": "_itemLink",
+          "description": "Breadcrumb link observer.",
+          "privacy": "protected",
+          "sourceRange": {
+            "start": {
+              "line": 95,
+              "column": 6
+            },
+            "end": {
+              "line": 97,
+              "column": 7
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "active",
+              "type": "boolean",
+              "description": "item is active."
+            },
+            {
+              "name": "link",
+              "type": "boolean",
+              "description": "item link is not null."
+            }
+          ],
+          "return": {
+            "type": "string",
+            "desc": "classes."
+          }
+        }
+      ],
+      "staticMethods": [],
+      "demos": [],
+      "metadata": {},
+      "sourceRange": {
+        "start": {
+          "line": 48,
+          "column": 4
+        },
+        "end": {
+          "line": 98,
+          "column": 5
+        }
+      },
+      "privacy": "public",
+      "superclass": "HTMLElement",
+      "name": "BS4Breadcrumb",
+      "attributes": [
+        {
+          "name": "items",
+          "description": "Breadcrumb items.",
+          "sourceRange": {
+            "start": {
+              "line": 62,
+              "column": 10
+            },
+            "end": {
+              "line": 62,
+              "column": 23
+            }
+          },
+          "metadata": {},
+          "type": "{text: string, link: string, active: boolean}"
+        }
+      ],
+      "events": [],
+      "styling": {
+        "cssVariables": [],
+        "selectors": []
+      },
+      "slots": [],
+      "tagname": "bs4-breadcrumb"
+    },
+    {
       "description": "`<bs4-button>` Use Bootstrap’s custom button styles for actions in forms,\ndialogs, and more. Includes support for a handful of contextual variations,\nsizes, states, and more.\n\nIn typical use, add the element to your body:\n\n    <body>\n      <bs4-button text=\"Default\"></bs4-button>\n\nClass representing the button.",
       "summary": "",
       "path": "elements\\bs4-button\\bs4-button.html",
