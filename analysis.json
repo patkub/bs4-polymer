@@ -49,7 +49,7 @@
       "tagname": "bs4-alert"
     },
     {
-      "description": "`<bs4-badge>` Small and adaptive tag for adding context to just about any\ncontent.\n\nIn typical use, add the element to your body:\n\n    <body>\n      <bs4-badge></bs4-badge>\n\nClass representing the badge.",
+      "description": "`<bs4-badge>` Small and adaptive tag for adding context to just about any\ncontent.\n\nIn typical use, add the element to your body:\n\n    <body>\n      <bs4-badge context=\"primary\" text=\"New\"></bs4-badge>\n\nClass representing the badge.",
       "summary": "",
       "path": "elements\\bs4-badge\\bs4-badge.html",
       "properties": [
@@ -186,7 +186,7 @@
       "tagname": "bs4-badge"
     },
     {
-      "description": "`<bs4-breadcrumb>` Small and adaptive tag for adding context to just about any\ncontent.\n\nIn typical use, add the element to your body:\n\n    <body>\n      <bs4-breadcrumb></bs4-breadcrumb>\n\nClass representing the breadcrumb.",
+      "description": "`<bs4-breadcrumb>` Small and adaptive tag for adding context to just about any\ncontent.\n\nIn typical use, add the element to your body:\n\n    <body>\n      <bs4-breadcrumb items='[\n        {\"text\": \"Home\", \"link\": \"#\", \"active\": false},\n        {\"text\": \"Library\", \"link\": \"#\", \"active\": false},\n        {\"text\": \"Data\", \"link\": \"#\", \"active\": false},\n        {\"text\": \"Bootstrap\", \"link\": \"#\", \"active\": true}]'></bs4-breadcrumb>\n\nClass representing the breadcrumb.",
       "summary": "",
       "path": "elements\\bs4-breadcrumb\\bs4-breadcrumb.html",
       "properties": [
@@ -197,11 +197,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 62,
+              "line": 66,
               "column": 10
             },
             "end": {
-              "line": 62,
+              "line": 66,
               "column": 23
             }
           },
@@ -217,11 +217,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 84,
+              "line": 88,
               "column": 6
             },
             "end": {
-              "line": 86,
+              "line": 90,
               "column": 7
             }
           },
@@ -244,11 +244,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 95,
+              "line": 99,
               "column": 6
             },
             "end": {
-              "line": 97,
+              "line": 101,
               "column": 7
             }
           },
@@ -276,11 +276,11 @@
       "metadata": {},
       "sourceRange": {
         "start": {
-          "line": 48,
+          "line": 52,
           "column": 4
         },
         "end": {
-          "line": 98,
+          "line": 102,
           "column": 5
         }
       },
@@ -293,11 +293,11 @@
           "description": "Breadcrumb items.",
           "sourceRange": {
             "start": {
-              "line": 62,
+              "line": 66,
               "column": 10
             },
             "end": {
-              "line": 62,
+              "line": 66,
               "column": 23
             }
           },
@@ -738,7 +738,7 @@
       "tagname": "bs4-jumbotron"
     },
     {
-      "description": "`<bs4-list-group>` Small and adaptive tag for adding context to just about any\ncontent.\n\nIn typical use, add the element to your body:\n\n    <body>\n      <bs4-list-group></bs4-list-group>\n\nClass representing the list-group.",
+      "description": "`<bs4-list-group>` List groups are a flexible and powerful component for\ndisplaying a series of content.\n\nIn typical use, add the element to your body:\n\n    <body>\n      <bs4-list-group items='[\n        {\"text\": \"Item 1\"},\n        {\"text\": \"Item 2\", \"active\": \"true\"},\n        {\"text\": \"Item 3\", \"context\": \"primary\"}]'></bs4-list-group>\n\nClass representing the list-group.",
       "summary": "",
       "path": "elements\\bs4-list-group\\bs4-list-group.html",
       "properties": [
@@ -749,11 +749,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 46,
+              "line": 49,
               "column": 10
             },
             "end": {
-              "line": 46,
+              "line": 49,
               "column": 23
             }
           },
@@ -769,11 +769,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 65,
+              "line": 68,
               "column": 6
             },
             "end": {
-              "line": 74,
+              "line": 77,
               "column": 7
             }
           },
@@ -801,11 +801,11 @@
       "metadata": {},
       "sourceRange": {
         "start": {
-          "line": 32,
+          "line": 35,
           "column": 4
         },
         "end": {
-          "line": 75,
+          "line": 78,
           "column": 5
         }
       },
@@ -818,11 +818,11 @@
           "description": "List group items.",
           "sourceRange": {
             "start": {
-              "line": 46,
+              "line": 49,
               "column": 10
             },
             "end": {
-              "line": 46,
+              "line": 49,
               "column": 23
             }
           },
