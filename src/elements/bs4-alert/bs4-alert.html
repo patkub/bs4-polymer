@@ -1,11 +1,18 @@
 <!-- Polymer Library -->
 <link rel="import" href="../../../../@npm-polymer/polymer/polymer-element.html">
 
+<!-- Dom If -->
+<link rel="import" href="../../../../@npm-polymer/polymer/lib/elements/dom-if.html">
+
+<!-- Geasture Events -->
+<link rel="import" href="../../../../@npm-polymer/polymer/lib/mixins/gesture-event-listeners.html">
+
 <!-- Context Mixin -->
 <link rel="import" href="../../mixins/bs4-context-mixin.html">
 
 <!-- Shared Styles Alert -->
 <link rel="import" href="../../shared-styles/bs4-alert/bs4-alert.html">
+<link rel="import" href="../../shared-styles/bs4-close/bs4-close.html">
 
 <!--
 `<bs4-alert>` Provide contextual feedback messages for typical user actions
@@ -19,21 +26,68 @@ In typical use, add the element to your body:
 <dom-module id="bs4-alert">
   <template>
     <style include="bs4-shared-styles-alert"></style>
+    <style include="bs4-shared-styles-close"></style>
     
-    <div class$="alert alert-{{context}}" role="alert">
+    <div id="alert" class$="alert alert-{{context}} {{_alertDismissibleClass(dismissible)}}" role="alert">
+        <template is="dom-if" if="{{dismissible}}">
+            <button type="button" class="close" aria-label="Close" on-tap="_close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </template>
         <slot></slot>
     </div>
   </template>
   
   <script>
-    /* eslint new-cap: [2, {"capIsNewExceptions": ["BS4ContextMixin"]}]
+    /* eslint new-cap: [2, {"capIsNewExceptions": ["Polymer.GestureEventListeners", "BS4ContextMixin"]}]
        no-undef: 0 */
     
     /** Class representing the alert. */
-    class BS4Alert extends BS4ContextMixin(Polymer.Element) {
+    class BS4Alert extends Polymer.GestureEventListeners(
+      BS4ContextMixin(Polymer.Element)) {
       /** HTML tag name. */
       static get is() {
         return 'bs4-alert';
+      }
+      
+      /** Declared properties. */
+      static get properties() {
+        return {
+          /**
+           * Alert is dismissible.
+           */
+          dismissible: {
+            type: Boolean,
+            value: false,
+            reflectToAttribute: true,
+          },
+        };
+      }
+      
+      /** Observers. */
+      static get observers() {
+        return [
+          '_alertDismissibleClass(dismissible)',
+        ];
+      }
+      
+      /**
+       * Alert dismissible class observer.
+       *
+       * @param {boolean} dismissible - alert is dismissible.
+       * @return {string} classes.
+       */
+      _alertDismissibleClass(dismissible) {
+        return dismissible ? 'alert-dismissible' : '';
+      }
+      
+      /**
+       * Close alert.
+       *
+       * @param {Object} e - on-tap event.
+       */
+      _close(e) {
+        this.$.alert.style.display = 'none';
       }
     }
     
