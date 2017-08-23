@@ -67,14 +67,16 @@ In typical use, add the element to your body:
       /** Observers. */
       static get observers() {
         return [
-          // Breadcrumb active
+          // Breadcrumb active class observer.
           '_itemActiveClass(active)',
+          
+          // Breadcrumb link observer.
           '_itemLink(active, link)',
         ];
       }
       
       /**
-       * List group active classes.
+       * Breadcrumb active class observer.
        *
        * @param {boolean} active - item is active.
        * @param {boolean} link - item link is not null.
@@ -85,7 +87,7 @@ In typical use, add the element to your body:
       }
       
       /**
-       * List group link.
+       * Breadcrumb link observer.
        *
        * @param {boolean} active - item is active.
        * @param {boolean} link - item link is not null.
