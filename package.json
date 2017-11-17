@@ -1,6 +1,6 @@
 {
   "name": "bs4-polymer",
-  "version": "0.2.12",
+  "version": "0.2.13",
   "description": "Bootstrap 4 components written in Polymer 2",
   "main": "index.js",
   "author": "Patrick Kubiak <pk9948@rit.edu>",
