@@ -1,0 +1,20 @@
+{
+  "name": "bs4-polymer",
+  "description": "Bootstrap 4 components written in Polymer 2",
+  "main": "index.js",
+  "authors": [
+    "Patrick Kubiak <pk9948@rit.edu>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/patkub/bs4-polymer",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "^2.2.0"
+  }
+}
