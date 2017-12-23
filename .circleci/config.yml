@@ -107,7 +107,7 @@ jobs:
             - ~/.cache/yarn
 workflows:
   version: 2
-  build_and_test:
+  lint_and_build:
     jobs:
       # greenkeeper-lockfile checks that CIRCLE_PREVIOUS_BUILD_NUM does not
       # exist. It must be the first job in the workflow, since subsequent
