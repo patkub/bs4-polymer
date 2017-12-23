@@ -587,9 +587,9 @@ boom@2.x.x:
   dependencies:
     hoek "2.x.x"
 
-bootstrap@4.0.0-beta:
-  version "4.0.0-beta"
-  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.0.0-beta.tgz#dc5928175d2e71310bc668cf9e05a907211b72a6"
+bootstrap@4.0.0-beta.2:
+  version "4.0.0-beta.2"
+  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.0.0-beta.2.tgz#4d67d2aa2219f062cd90bc1247e6747b9e8fd051"
 
 brace-expansion@^1.0.0, brace-expansion@^1.1.7:
   version "1.1.8"
@@ -952,9 +952,9 @@ eslint-config-google@^0.9.1:
   version "0.9.1"
   resolved "https://registry.yarnpkg.com/eslint-config-google/-/eslint-config-google-0.9.1.tgz#83353c3dba05f72bb123169a4094f4ff120391eb"
 
-eslint-plugin-html@^3.1.1:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-html/-/eslint-plugin-html-3.2.0.tgz#fb64c2789e9582b97f580a38814a57966f91a7b2"
+eslint-plugin-html@^4.0.0:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-html/-/eslint-plugin-html-4.0.1.tgz#fc70072263cc938496fbbc9cf648660e41fa269a"
   dependencies:
     htmlparser2 "^3.8.2"
 
