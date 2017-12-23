@@ -22,7 +22,7 @@ In typical use, add the element to your body:
       }
     </style>
     
-    <a href="{{link}}" class$="btn {{_btnClassesChanged(context, outline, size, block, disabled)}}"
+    <a href="{{link}}" class$="btn {{_btnClassesChanged(context, outline, size, block, active, disabled)}}"
       role="button" aria-pressed="true">{{text}}</a>
   </template>
   
@@ -60,6 +60,12 @@ In typical use, add the element to your body:
             value: false,
           },
           
+          /** Whether this button is active and will appear pressed. */
+          active: {
+            type: Boolean,
+            value: false,
+          },
+          
           /** Whether this button is disabled. */
           disabled: {
             type: Boolean,
@@ -89,10 +95,11 @@ In typical use, add the element to your body:
        * @param {boolean} outline - new outline.
        * @param {boolean} size - new size.
        * @param {boolean} block - new block.
+       * @param {boolean} active - new active.
        * @param {boolean} disabled - new disabled.
        * @return {string} button classes.
        */
-      _btnClassesChanged(context, outline, size, block, disabled) {
+      _btnClassesChanged(context, outline, size, block, active, disabled) {
         let classes = '';
         if (context) {
           classes += 'btn-' + context + ' ';
@@ -105,6 +112,9 @@ In typical use, add the element to your body:
         }
         if (block) {
           classes += 'btn-block ';
+        }
+        if (active) {
+          classes += 'active ';
         }
         if (disabled) {
           classes += 'disabled ';
