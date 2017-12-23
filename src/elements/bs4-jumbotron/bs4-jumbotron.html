@@ -17,7 +17,7 @@ In typical use, add the element to your body:
   <template>
     <style include="bs4-shared-styles-jumbotron"></style>
     
-    <div class="jumbotron">
+    <div class$="jumbotron {{_jumbotronClassesChanged(fluid)}}">
       <slot></slot>
     </div>
   </template>
@@ -28,6 +28,39 @@ In typical use, add the element to your body:
       /** HTML tag name. */
       static get is() {
         return 'bs4-jumbotron';
+      }
+      
+      /** Declared properties. */
+      static get properties() {
+        return {
+          /** Whether this jumbotron occupies the entire horizontal space of its parent. */
+          fluid: {
+            type: Boolean,
+            value: false,
+          },
+        };
+      }
+      
+      /** Observers. */
+      static get observers() {
+        return [
+          // Jumbotron classes changed observer.
+          '_jumbotronClassesChanged(fluid)',
+        ];
+      }
+      
+      /**
+       * Jumbotron classes changed observer.
+       *
+       * @param {boolean} fluid - new fluid.
+       * @return {string} jumbotron classes.
+       */
+      _jumbotronClassesChanged(fluid) {
+        let classes = '';
+        if (fluid) {
+          classes += 'jumbotron-fluid ';
+        }
+        return classes;
       }
     }
 
