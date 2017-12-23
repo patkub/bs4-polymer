@@ -107,20 +107,31 @@ jobs:
             - ~/.cache/yarn
 workflows:
   version: 2
-  build_and_lint:
+  build_and_test:
     jobs:
+      # greenkeeper-lockfile checks that CIRCLE_PREVIOUS_BUILD_NUM does not
+      # exist. It must be the first job in the workflow, since subsequent
+      # workflows will add CIRCLE_PREVIOUS_BUILD_NUM. In order to force the
+      # lockfile job to run first, every other job in the workflow must require
+      # the lockfile job to complete before running.
+      - lockfile
+      
+      # Linting
       - lint:
           filters:
             branches:
               ignore:
                 - gh-pages
+          requires:
+            # make sure greenkeeper-lockfile runs first in workflow
+            - lockfile
+      
+      # Build
       - build:
           filters:
             branches:
               ignore:
                 - gh-pages
-      - lockfile:
-          filters:
-            branches:
-              only:
-                - /^greenkeeper-.*$/
+          requires:
+            # make sure greenkeeper-lockfile runs first in workflow
+            - lockfile
