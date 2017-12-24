@@ -9,7 +9,7 @@
 
 > [Bootstrap 4](http://getbootstrap.com/) elements and shared styles for [Polymer 2](https://www.polymer-project.org/).
 
-[Docs](https://patkub.github.io/bs4-polymer/) | [Bootstrap 4](http://getbootstrap.com/) | [Polymer 2](https://www.polymer-project.org/)
+[Demo](https://patkub.github.io/bs4-polymer-demo/) | [Docs](https://patkub.github.io/bs4-polymer/) | [Bootstrap 4](http://getbootstrap.com/) | [Polymer 2](https://www.polymer-project.org/)
 
 ### Setup
 
