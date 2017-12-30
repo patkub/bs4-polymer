@@ -21,7 +21,7 @@ for styling:
 
 Custom property | Description | Default
 ----------------|-------------|----------
-`--bs4-polymer-button` | Mixin applied to the button | `{}`
+`--bs4-polymer-button` | Mixin applied to the .btn-container class | `{}`
 `--bs4-polymer-button-btn` | Mixin applied to the .btn class | `{}`
 -->
 <dom-module id="bs4-button">
@@ -29,6 +29,8 @@ Custom property | Description | Default
     <style include="bs4-shared-styles-buttons">
       :host {
         text-decoration: none;
+      }
+      .btn-container {
         @apply --bs4-polymer-button;
       }
       .btn {
@@ -36,8 +38,10 @@ Custom property | Description | Default
       }
     </style>
     
-    <a href="{{link}}" class$="btn {{_btnClassesChanged(context, outline, size, block, active, disabled)}}"
-      role="button" aria-pressed="true">{{text}}</a>
+    <div class="btn-container">
+      <a href="{{link}}" class$="btn {{_btnClassesChanged(context, outline, size, block, active, disabled)}}"
+        role="button" aria-pressed="true">{{text}}</a>
+    </div>
   </template>
   
   <script>
