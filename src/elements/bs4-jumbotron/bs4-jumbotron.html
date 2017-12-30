@@ -12,10 +12,23 @@ In typical use, add the element to your body:
 
     <body>
       <bs4-jumbotron></bs4-jumbotron>
+
+### Styling
+
+`<bs4-jumbotron>` provides the following custom properties and mixins
+for styling:
+
+Custom property | Description | Default
+----------------|-------------|----------
+`--bs4-polymer-jumbotron` | Mixin applied to the jumbotron | `{}`
 -->
 <dom-module id="bs4-jumbotron">
   <template>
-    <style include="bs4-shared-styles-jumbotron"></style>
+    <style include="bs4-shared-styles-jumbotron">
+      .jumbotron {
+        @apply --bs4-polymer-jumbotron;
+      }
+    </style>
     
     <div class$="jumbotron {{_jumbotronClassesChanged(fluid)}}">
       <slot></slot>

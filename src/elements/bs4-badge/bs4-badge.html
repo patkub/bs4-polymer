@@ -15,10 +15,23 @@ In typical use, add the element to your body:
 
     <body>
       <bs4-badge context="primary" text="New"></bs4-badge>
+
+### Styling
+
+`<bs4-badge>` provides the following custom properties and mixins
+for styling:
+
+Custom property | Description | Default
+----------------|-------------|----------
+`--bs4-polymer-badge` | Mixin applied to the badge | `{}`
 -->
 <dom-module id="bs4-badge">
   <template>
-    <style include="bs4-shared-styles-badge"></style>
+    <style include="bs4-shared-styles-badge">
+      .badge {
+        @apply --bs4-polymer-badge;
+      }
+    </style>
 
     <span class$="badge {{_badgeClassesChanged(context, pill)}}">{{text}}</span>
   </template>

@@ -13,12 +13,22 @@ In typical use, add the element to your body:
 
     <body>
       <bs4-button text="Default"></bs4-button>
+
+### Styling
+
+`<bs4-button>` provides the following custom properties and mixins
+for styling:
+
+Custom property | Description | Default
+----------------|-------------|----------
+`--bs4-polymer-button` | Mixin applied to the button | `{}`
 -->
 <dom-module id="bs4-button">
   <template>
     <style include="bs4-shared-styles-buttons">
       a {
         text-decoration: none;
+        @apply --bs4-polymer-button;
       }
     </style>
     

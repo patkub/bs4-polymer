@@ -22,6 +22,16 @@ In typical use, add the element to your body:
         {"text": "Library", "link": "#", "active": false},
         {"text": "Data", "link": "#", "active": false},
         {"text": "Bootstrap", "link": "#", "active": true}]'></bs4-breadcrumb>
+
+### Styling
+
+`<bs4-breadcrumb>` provides the following custom properties and mixins
+for styling:
+
+Custom property | Description | Default
+----------------|-------------|----------
+`--bs4-polymer-breadcrumb` | Mixin applied to the breadcrumb | `{}`
+`--bs4-polymer-breadcrumb-item` | Mixin applied to all breadcrumb items | `{}`
 -->
 <dom-module id="bs4-breadcrumb">
   <template>
@@ -31,6 +41,12 @@ In typical use, add the element to your body:
       }
       a:hover {
         text-decoration: underline;
+      }
+      .breadcrumb {
+        @apply --bs4-polymer-breadcrumb;
+      }
+      .breadcrumb-item {
+        @apply --bs4-polymer-breadcrumb-item;
       }
     </style>
     

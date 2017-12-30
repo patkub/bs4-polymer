@@ -18,10 +18,27 @@ In typical use, add the element to your body:
         {"text": "Item 1"},
         {"text": "Item 2", "active": "true"},
         {"text": "Item 3", "context": "primary"}]'></bs4-list-group>
+
+### Styling
+
+`<bs4-list-group>` provides the following custom properties and mixins
+for styling:
+
+Custom property | Description | Default
+----------------|-------------|----------
+`--bs4-polymer-list-group` | Mixin applied to the list group | `{}`
+`--bs4-polymer-list-group-item` | Mixin applied to all list group items | `{}`
 -->
 <dom-module id="bs4-list-group">
   <template>
-    <style include="bs4-shared-styles-list-group"></style>
+    <style include="bs4-shared-styles-list-group">
+      .list-group {
+        @apply --bs4-polymer-list-group;
+      }
+      .list-group-item {
+        @apply --bs4-polymer-list-group-item;
+      }
+    </style>
     
     <ul class="list-group">
       <template is="dom-repeat" items="{{items}}">

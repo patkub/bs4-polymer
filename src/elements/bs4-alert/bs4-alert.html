@@ -24,11 +24,24 @@ In typical use, add the element to your body:
 
     <body>
       <bs4-alert context="success"></bs4-alert>
+
+### Styling
+
+`<bs4-alert>` provides the following custom properties and mixins
+for styling:
+
+Custom property | Description | Default
+----------------|-------------|----------
+`--bs4-polymer-alert` | Mixin applied to the alert | `{}`
 -->
 <dom-module id="bs4-alert">
   <template>
     <style include="bs4-shared-styles-alert"></style>
-    <style include="bs4-shared-styles-close"></style>
+    <style include="bs4-shared-styles-close">
+      .alert {
+        @apply --bs4-polymer-alert;
+      }
+    </style>
     
     <div id="alert" class$="alert alert-{{context}} {{_alertDismissibleClass(dismissible)}}" role="alert">
         <template is="dom-if" if="{{dismissible}}">
