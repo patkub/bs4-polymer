@@ -2456,9 +2456,9 @@ pluralize@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-4.0.0.tgz#59b708c1c0190a2f692f1c7618c446b052fd1762"
 
-popper.js@^1.12.1:
-  version "1.12.1"
-  resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.12.1.tgz#623f3c6124ffbc065c39c100b223d6bd4b659303"
+popper.js@^1.12.9:
+  version "1.12.9"
+  resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.12.9.tgz#0dfbc2dff96c451bb332edcfcfaaf566d331d5b3"
 
 prelude-ls@~1.1.2:
   version "1.1.2"
