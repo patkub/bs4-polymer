@@ -22,6 +22,7 @@ for styling:
 Custom property | Description | Default
 ----------------|-------------|----------
 `--bs4-polymer-button` | Mixin applied to the button | `{}`
+`--bs4-polymer-button-btn` | Mixin applied to the .btn class | `{}`
 -->
 <dom-module id="bs4-button">
   <template>
@@ -29,6 +30,9 @@ Custom property | Description | Default
       :host {
         text-decoration: none;
         @apply --bs4-polymer-button;
+      }
+      .btn {
+        @apply --bs4-polymer-button-btn;
       }
     </style>
     
