@@ -1,5 +1,8 @@
 // Core functions, variables and mixins
 @import "../core";
 
+// Input group extends .form-control-lg
+@import "../../../node_modules/bootstrap/scss/forms";
+
 // Input group
 @import "../../../node_modules/bootstrap/scss/input-group";

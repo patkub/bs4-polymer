@@ -17,7 +17,10 @@ import inlineSource from 'gulp-inline-source';
  */
 gulp.task('sass', function() {
   return gulp.src('src/**/*.scss')
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass({
+      outputStyle: 'expanded',
+      precision: 6,
+    }).on('error', sass.logError))
     .pipe(cleanCSS({
       level: 2,
     }))
